@@ -9,12 +9,12 @@ let app = new Vue({
         ]
     },
     methods: {
-        test: function (start, end) {
-            
+        move: function (from, to) {
+            this.register[to] = this.register[from];
         },
         
     },
     created() {
-        console.log("hello world");
+        this.move(0, 1);
     }
 });
