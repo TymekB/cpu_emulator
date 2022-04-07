@@ -12,9 +12,14 @@ let app = new Vue({
         move: function (from, to) {
             this.register[to] = this.register[from];
         },
-        
+        exchange: function (from, to) {
+            let temp = this.register[from];
+            this.register[from] = this.register[to];
+            this.register[to] = temp;
+            console.log(this.register);
+        },
     },
     created() {
-        this.move(0, 1);
+        this.exchange(0, 1);
     }
 });
