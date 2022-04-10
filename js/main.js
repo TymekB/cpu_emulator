@@ -1,25 +1,31 @@
-let app = new Vue({
+new Vue({
     el: '#app',
     data: {
         register: [
-            'f963',
-            'c5f0',
-            '9e46',
-            '35b1',
-        ]
+            {name: "AX", value: "f963"},
+            {name: "BX", value: "c5f0"},
+            {name: "CX", value: "9e46"},
+            {name: "DX", value: "35b1"}
+        ],
+        message: ""
     },
     methods: {
         move: function (from, to) {
-            this.register[to] = this.register[from];
+            const fromIndex = this.register.findIndex((el) => el.name === from);
+            const toIndex = this.register.findIndex((el) => el.name === to);
+
+            this.register[toIndex].value = this.register[fromIndex].value;
         },
         exchange: function (from, to) {
-            let temp = this.register[from];
-            this.register[from] = this.register[to];
-            this.register[to] = temp;
-            console.log(this.register);
+            const fromIndex = this.register.findIndex((el) => el.name === from);
+            const toIndex = this.register.findIndex((el) => el.name === to);
+            const temp = this.register[fromIndex].value;
+
+            this.register[fromIndex].value = this.register[toIndex].value;
+            this.register[toIndex].value = temp;
         },
     },
     created() {
-        this.exchange(0, 1);
+
     }
 });
