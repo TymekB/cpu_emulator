@@ -18,8 +18,24 @@
                             <div class="d-flex flex-row" v-for="item in register" :key="item.name">
                                 <div class="column">{{item.name}}</div>
                                 <div class="column">
+                                    <input type="text" class="form-control shadow-none" v-model="item.value">
                                     <input type="text" class="form-control" v-model="item.value">
                                 </div>
+                            </div>
+                            <hr>
+
+                            <div class="d-flex flex-row justify-content-center">
+                                <select class="form-select shadow-none" style="width: 100px;" v-model="from">
+                                    <option selected></option>
+                                    <option v-for="item in register" :value="item.name">{{item.name}}</option>
+                                </select>
+
+                                <div style="line-height: 55px;">-></div>
+
+                                <select class="form-select shadow-none" style="width: 100px;" v-model="to">
+                                    <option selected></option>
+                                    <option v-for="item in register" :value="item.name">{{item.name}}</option>
+                                </select>
                             </div>
                         </div>
                     </div>

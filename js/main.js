@@ -7,7 +7,8 @@ new Vue({
             {name: "CX", value: "9e46"},
             {name: "DX", value: "35b1"}
         ],
-        message: ""
+        from: "",
+        to: "",
     },
     methods: {
         move: function (from, to) {
