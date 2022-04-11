@@ -13,15 +13,18 @@
         <div class="row">
             <div class="col-md-4 offset-md-4">
                 <div class="card">
+                    <div class="card-header text-center">
+                        CPU Emulator
+                    </div>
                     <div class="card-body">
                         <div id="app">
                             <div class="d-flex flex-row" v-for="item in register" :key="item.name">
                                 <div class="column">{{item.name}}</div>
                                 <div class="column">
                                     <input type="text" class="form-control shadow-none" v-model="item.value">
-                                    <input type="text" class="form-control" v-model="item.value">
                                 </div>
                             </div>
+
                             <hr>
 
                             <div class="d-flex flex-row justify-content-center">
@@ -36,6 +39,15 @@
                                     <option selected></option>
                                     <option v-for="item in register" :value="item.name">{{item.name}}</option>
                                 </select>
+                            </div>
+
+                            <div class="d-flex flex-row justify-content-center">
+                                <button type="button" class="btn btn-primary shadow-none" style="margin: 18px; width: 100px;">
+                                    MV
+                                </button>
+                                <button type="button" class="btn btn-warning shadow-none" style="margin: 18px; width: 100px;">
+                                    XCHG
+                                </button>
                             </div>
                         </div>
                     </div>
