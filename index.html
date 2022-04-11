@@ -42,10 +42,13 @@
                             </div>
 
                             <div class="d-flex flex-row justify-content-center">
-                                <button type="button" class="btn btn-primary shadow-none" style="margin: 18px; width: 100px;">
+                                <button type="button" class="btn btn-primary shadow-none"
+                                        @click="move(from, to)">
                                     MV
                                 </button>
-                                <button type="button" class="btn btn-warning shadow-none" style="margin: 18px; width: 100px;">
+                                <button type="button" class="btn btn-warning shadow-none"
+                                        @click="exchange(from, to)"
+                                >
                                     XCHG
                                 </button>
                             </div>
