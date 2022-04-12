@@ -43,11 +43,14 @@
 
                             <div class="d-flex flex-row justify-content-center">
                                 <button type="button" class="btn btn-primary shadow-none"
-                                        @click="move(from, to)">
+                                        @click="move(from, to)"
+                                        :disabled="isDisabled()"
+                                >
                                     MV
                                 </button>
                                 <button type="button" class="btn btn-warning shadow-none"
                                         @click="exchange(from, to)"
+                                        :disabled="isDisabled()"
                                 >
                                     XCHG
                                 </button>
