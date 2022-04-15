@@ -25,3 +25,8 @@ body {
     margin: 18px;
     min-width: 100px;
 }
+
+.fa-arrow-right {
+    line-height: 58px;
+    font-size: 14px;
+}
