@@ -20,6 +20,7 @@ new Vue({
         move: function (from, to) {
             const fromIndex = this.getRegisterIndexByName(from);
             const toIndex = this.getRegisterIndexByName(to);
+
             this.register[toIndex].value = this.register[fromIndex].value;
         },
         exchange: function (from, to) {
