@@ -22,11 +22,15 @@ body {
 }
 
 .btn {
-    margin: 18px;
+    margin: 17px;
     min-width: 100px;
 }
 
 .fa-arrow-right {
     line-height: 58px;
     font-size: 14px;
+}
+
+hr {
+    border-top : 1px solid #f3f0f0;
 }
