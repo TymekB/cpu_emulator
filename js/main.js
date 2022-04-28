@@ -2,10 +2,10 @@ new Vue({
     el: '#app',
     data: {
         register: [
-            {name: "AX", value: "f963"},
-            {name: "BX", value: "c5f0"},
-            {name: "CX", value: "9e46"},
-            {name: "DX", value: "35b1"}
+            {name: "AX", value: ""},
+            {name: "BX", value: ""},
+            {name: "CX", value: ""},
+            {name: "DX", value: ""}
         ],
         from: "",
         to: "",
@@ -34,6 +34,10 @@ new Vue({
 
             this.register[fromIndex].value = this.register[toIndex].value;
             this.register[toIndex].value = temp;
+        },
+        randomizeRegister: function(name) {
+            const index = this.getRegisterIndexByName(name);
+            this.register[index].value = (Math.floor(Math.random() * 65535) + 4096).toString(16);
         },
     }
 });
