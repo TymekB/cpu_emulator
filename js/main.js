@@ -39,5 +39,8 @@ new Vue({
             const index = this.getRegisterIndexByName(name);
             this.register[index].value = (Math.floor(Math.random() * 65535) + 4096).toString(16);
         },
+        reset: function() {
+            this.register = this.register.map(el => ({name: el.name, value: ""}));
+        }
     }
 });
